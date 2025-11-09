@@ -1,6 +1,6 @@
 # CIS F5 Benchmark Report
 
-The CIS_F5_Benchmark_Reporter.py script can be run from a F5 BIG-IP and will check if the configuration is compliant with the CIS Benchmark for F5.
+The CIS_F5_Benchmark_Reporter.py script can be run from a F5 BIG-IP and will check if the configuration is compliant with the *[CIS Benchmark for F5](https://www.cisecurity.org/benchmark/f5)*.
 
 Use the appropriate arguments to report to file, mail or screen. See the help page below.
 ```
