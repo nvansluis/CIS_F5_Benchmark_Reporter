@@ -69,7 +69,7 @@ hostname = platform.node()
 software_build = None
 software_edition = None
 software_version = None
-version = "v0.4"
+version = "v0.5"
 
 class CIS:
     def __init__(self, control, description):
@@ -1349,7 +1349,7 @@ def generate_html_report():
     html += '</td></tr>\n'
 
     html += '<tr style="background-color: #eee;"><td rowspan="4" style="background-color: #eee; width: 120px; vertical-align: top; padding-left: 10px;">\n'
-    html += f'<img src="https://ipforward.nl/cis/piechart.php?c={benchmark_totals["correct_percentage"]}&e={benchmark_totals["exceptions_percentage"]}&i={benchmark_totals["incorrect_percentage"]}" />'
+    html += f'<img style="width: 100px; height: 100px;" src="https://ipforward.nl/cis/piechart.php?c={benchmark_totals["correct_percentage"]}&e={benchmark_totals["exceptions_percentage"]}&i={benchmark_totals["incorrect_percentage"]}" />'
     html += '</td>'
     html += '<td colspan="3" style="background-color: #eee; width: 280px; vertical-align: bottom;">\n'
     html += '<p><span class="title1">host</span></p>\n'
