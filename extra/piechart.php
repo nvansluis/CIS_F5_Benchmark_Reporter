@@ -2,7 +2,7 @@
 /********************************************************************
 piechart.php - creates pie chart for CIS F5 Benchmark Reports
 
-Version: 0.1
+Version: 0.2
 Last Modified: 10 November 2025
 Author: Niels van Sluis
 
@@ -41,6 +41,11 @@ if (isset($_GET['c']) && isset($_GET['e']) && isset($_GET['i'])) {
       $exceptions_value = (($exceptions * 360) / 100);
       $incorrect_value = (($incorrect * 360) / 100);
     }
+}
+
+// add a little more green if the above calculation doesn't add up to a perfect 360 degrees
+while ($correct_value + $exceptions_value + $incorrect_value < 360) {
+  $correct_value++;
 }
 
 $end_degrees_first_pie = 270 + $correct_value;
