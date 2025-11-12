@@ -19,3 +19,9 @@ Report bugs to nvansluis@gmail.com
 Below is a screenshot that shows what the report will look like if sent by e-mail.
 
 ![Screenshot of the actual report](/assets/screenshot-01.png "Screenhot 01")
+
+### Recommendations
+Store the script somewhere in the /shared partition. The data stored on this partition will still be available after an upgrade.
+
+### Feedback
+The script has been tested on F5 BIG-IP version 17.x. If you have any questions, remarks or feedback, just let me know.
