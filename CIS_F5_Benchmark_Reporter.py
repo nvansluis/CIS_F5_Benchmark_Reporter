@@ -3,8 +3,8 @@
 #
 # CIS F5 Benchmark Reporter - Reports on compliancy with CIS Benchmark for F5
 #
-# Version: 0.4
-# Last Modified: 21 March 2025
+# Version: 0.6
+# Last Modified: 17 November 2025
 # Author: Niels van Sluis
 #
 # This Sample Software provided by the author is for illustrative
@@ -69,7 +69,7 @@ hostname = platform.node()
 software_build = None
 software_edition = None
 software_version = None
-version = "v0.5"
+version = "v0.6"
 
 class CIS:
     def __init__(self, control, description):
@@ -818,6 +818,9 @@ def set_enabled_services():
 
     # antserver
     enabled_services['antserver'] = EnabledServices('antserver', 'Required for dynamic web content filtering for SWG in APM', 'enabled', ['apm'])
+
+    # asm
+    enabled_services['asm'] = EnabledServices('asm', 'Required for Application Security Manager (ASM) ', 'enabled', ['asm'])
 
     # asmcrond
     enabled_services['asmcrond'] = EnabledServices('asmcrond', 'Required for executing tasks that are scheduled by asm_config_server.', 'enabled', ['asm'])
