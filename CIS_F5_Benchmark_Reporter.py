@@ -3,8 +3,8 @@
 #
 # CIS F5 Benchmark Reporter - Reports on compliancy with CIS Benchmark for F5
 #
-# Version: 0.6
-# Last Modified: 17 November 2025
+# Version: 0.7
+# Last Modified: 18 November 2025
 # Author: Niels van Sluis
 #
 # This Sample Software provided by the author is for illustrative
@@ -69,7 +69,7 @@ hostname = platform.node()
 software_build = None
 software_edition = None
 software_version = None
-version = "v0.6"
+version = "v0.7"
 
 class CIS:
     def __init__(self, control, description):
@@ -920,6 +920,9 @@ def set_enabled_services():
 
     # dosl7d
     enabled_services['dosl7d'] = EnabledServices('dosl7d', 'Required for L7 DoS protection.', 'enabled', ['asm'])
+
+    # dosl7d_attack_monitor
+    enabled_services['dosl7d_attack_monitor'] = EnabledServices('dosl7d', 'Required for L7 DoS protection.', 'enabled', ['asm'])
 
     # dwbld
     enabled_services['dwbld'] = EnabledServices('dwbld', 'Required for AFM IP intelligence feature.', 'enabled', ['afm'])
