@@ -3,7 +3,7 @@
 #
 # CIS F5 Benchmark Reporter - Reports on compliancy with CIS Benchmark for F5
 #
-# Version: 0.7
+# Version: 0.7.1
 # Last Modified: 18 November 2025
 # Author: Niels van Sluis
 #
@@ -69,7 +69,7 @@ hostname = platform.node()
 software_build = None
 software_edition = None
 software_version = None
-version = "v0.7"
+version = "v0.7.1"
 
 class CIS:
     def __init__(self, control, description):
@@ -922,7 +922,7 @@ def set_enabled_services():
     enabled_services['dosl7d'] = EnabledServices('dosl7d', 'Required for L7 DoS protection.', 'enabled', ['asm'])
 
     # dosl7d_attack_monitor
-    enabled_services['dosl7d_attack_monitor'] = EnabledServices('dosl7d', 'Required for L7 DoS protection.', 'enabled', ['asm'])
+    enabled_services['dosl7d_attack_monitor'] = EnabledServices('dosl7d_attack_monitor', 'Required for L7 DoS protection.', 'enabled', ['asm'])
 
     # dwbld
     enabled_services['dwbld'] = EnabledServices('dwbld', 'Required for AFM IP intelligence feature.', 'enabled', ['afm'])
@@ -935,6 +935,9 @@ def set_enabled_services():
 
     # eca
     enabled_services['eca'] = EnabledServices('eca', 'Required for NTLM authentication in APM.', 'enabled', ['apm'])
+
+    # ecmd
+    enabled_services['ecmd'] = EnabledServices('ecmd', 'Elastic Compute Manager.', 'enabled', ['ltm'])
 
     # errdefsd
     enabled_services['errdefsd'] = EnabledServices('errdefsd', 'Required for high-speed logging via mgmt interface.', 'enabled', ['ltm'])
